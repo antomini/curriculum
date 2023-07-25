@@ -1,2 +1,2 @@
 # curriculum
-Curriculum standard project
+Curriculum standard format subdivided in sections and subsections.
