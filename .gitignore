@@ -1,0 +1,6 @@
+*.aux
+curriculum.fdb_latexmk
+curriculum.fls
+*.log
+curriculum.out
+curriculum.synctex.gz
