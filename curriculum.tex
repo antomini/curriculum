@@ -5,13 +5,27 @@
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 \usepackage[left=2cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+\usepackage{graphicx} %for includegraphics
+
+\usepackage{xcolor}
+\definecolor{pastelblue}{RGB}{70,70,180}
+\definecolor{pastelred}{RGB}{180,70,70}
+
 \usepackage{enumitem}
+\setlist[description]{leftmargin=15mm}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\large\bfseries\color{pastelred}}
+\titlelabel{}
+
+
 \usepackage{fontawesome}
 
 \usepackage{hyperref}
 \hypersetup{
     colorlinks = true,
-    urlcolor=blue,
+    urlcolor=pastelblue,
 }
 
 % Definizioni personalizzate per le sezioni
@@ -21,74 +35,36 @@
 % Inizio del documento
 \begin{document}
 
-
-
 % Informazioni personali
-\begin{center}
-    \textbf{\Large Antonio Minighin}
-\end{center}
-\begin{center}
-    \faHome \ Padova, 35139, Italy \\
-    \faMobile \ +39 329 3528187 \\
-    \faPaperPlane \ \href{mailto://toto.minighin@gmail.com}{toto.minighin@gmail.com} \\
-    \href{https://github.com/antomini}{\faGithub} \ | \
-    \href{https://linkedin.com/in/antonio-minighin-b92074236}{\faLinkedinSquare}
-\end{center}
+\begin{minipage}{0.2\textwidth}
+    \includegraphics[scale=0.2]{images/fotoSkype.png}
+\end{minipage}
+%using minipage+center the sum fotopage + infopage/2 = textwidth/2
+\begin{minipage}{0.6\textwidth}
+    \begin{center}
+        \textbf{\LARGE Antonio Minighin}
+    \end{center}
+    \begin{center}
+        \faHome \ Padova, 35139, Italy \\
+        \faMobile \ +39 329 3528187 \\
+        \faPaperPlane \ \href{mailto://toto.minighin@gmail.com}{toto.minighin@gmail.com} \\
+        \href{https://github.com/antomini}{\faGithub} \ | \
+        \href{https://linkedin.com/in/antonio-minighin-b92074236}{\faLinkedinSquare}
+    \end{center}
+\end{minipage}
 
-% Sezione: Formazione universitaria
-\section*{Academic Education}
-\begin{itemize}[leftmargin=*]
-    \item \textbf{Master's Degree in Electronic Engineering} 100/110, Università degli Studi di Padova \hfill 2023
-    \begin{itemize}
-        \item Thesis: \href{https://thesis.unipd.it/handle/20.500.12608/48003}{PWM controller design with Zynq SoC}, an embedded control system for switching mode power applications
-        \item 
-    \end{itemize}
-    \item \textbf{Laurea Triennale in Ingegneria Elettronica}, Università degli Studi, Città \hfill Anno di laurea
-    \begin{itemize}
-        \item Titolo della tesi: "Titolo della tua tesi"
-        \item Relatore: Prof. Nome Cognome
-    \end{itemize}
-\end{itemize}
 
-% Sezione: Esperienze lavorative
-\cvsection{Esperienze Lavorative}
-\begin{itemize}[leftmargin=*]
-    \item \textbf{Nome dell'Azienda}, Città \hfill Periodo di lavoro
-    \begin{itemize}
-        \item Descrizione delle mansioni svolte e delle responsabilità
-    \end{itemize}
-    \item \textbf{Nome dell'Azienda}, Città \hfill Periodo di lavoro
-    \begin{itemize}
-        \item Descrizione delle mansioni svolte e delle responsabilità
-    \end{itemize}
-\end{itemize}
+\input{contents/uni.tex}
 
-% Sezione: Competenze tecniche
-\cvsection{Competenze Tecniche}
-\cvsubsection{Linguaggi di programmazione}
-\begin{itemize}[leftmargin=*]
-    \item Linguaggio 1, Linguaggio 2, Linguaggio 3
-\end{itemize}
+\input{contents/exams.tex}
 
-\cvsubsection{Software e strumenti}
-\begin{itemize}[leftmargin=*]
-    \item Software 1, Software 2, Strumento 3
-\end{itemize}
+\input{contents/work.tex}
 
-% Sezione: Lingue straniere
-\cvsection{Lingue Straniere}
-\begin{itemize}[leftmargin=*]
-    \item Italiano (madrelingua)
-    \item Inglese (livello avanzato)
-    \item Altra lingua (livello di competenza)
-\end{itemize}
+\input{contents/tech.tex}
 
-% Sezione: Altre informazioni
-\cvsection{Altre Informazioni}
-\begin{itemize}[leftmargin=*]
-    \item Hobby e interessi
-    \item Altre attività rilevanti
-\end{itemize}
+\input{contents/spoken.tex}
+
+\input{contents/resume.tex}
 
 % Fine del documento
 \end{document}

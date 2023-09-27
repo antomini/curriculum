@@ -4,3 +4,6 @@ curriculum.fls
 *.log
 curriculum.out
 curriculum.synctex.gz
+curriculum.bbl
+
+.vscode/
